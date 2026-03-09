@@ -18,6 +18,8 @@
 --
 -- Table structure for table `Authors`
 --
+CREATE DATABASE IF NOT EXISTS alx_book_store;
+USE alx_book_store;
 
 DROP TABLE IF EXISTS `Authors`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
