@@ -22,8 +22,8 @@ CREATE TABLE `Books` (
 
 CREATE TABLE `Customers` (
   `customer_id ` INT NOT NULL,
-  `customer_name` varchar(215) DEFAULT NULL,
-  `email` varchar(215) DEFAULT NULL,
+  `customer_name` VARCHAR(215),
+  `email` VARCHAR(215),
   `address` TEXT,
   PRIMARY KEY (`customer_id `)
 )
