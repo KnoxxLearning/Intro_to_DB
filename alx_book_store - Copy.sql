@@ -21,6 +21,9 @@
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 USE alx_book_store;
 
+DROP TABLE IF EXISTS `Authors`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Authors` (
   `author_id` int NOT NULL,
   `author_name` varchar(215) DEFAULT NULL,
@@ -41,6 +44,9 @@ UNLOCK TABLES;
 -- Table structure for table `Books`
 --
 
+DROP TABLE IF EXISTS `Books`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Books` (
   `book_id` int NOT NULL,
   `title` varchar(130) DEFAULT NULL,
@@ -66,6 +72,9 @@ UNLOCK TABLES;
 -- Table structure for table `Customers`
 --
 
+DROP TABLE IF EXISTS `Customers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Customers` (
   `customer_id` int NOT NULL,
   `customer_name` varchar(215) DEFAULT NULL,
@@ -88,6 +97,9 @@ UNLOCK TABLES;
 -- Table structure for table `Order_Details`
 --
 
+DROP TABLE IF EXISTS `Order_Details`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Order_Details` (
   `orderdetailid` int NOT NULL,
   `order_id` int NOT NULL,
@@ -113,6 +125,9 @@ UNLOCK TABLES;
 -- Table structure for table `Orders`
 --
 
+DROP TABLE IF EXISTS `Orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Orders` (
   `order_id` int NOT NULL,
   `customer_id` int NOT NULL,
