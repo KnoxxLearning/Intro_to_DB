@@ -23,9 +23,9 @@ CREATE TABLE `Books` (
 -- Table structure for table `Customers`
 
 CREATE TABLE `Customers` (
-  `customer_id ` int NOT NULL,
-  `customer_name` varchar(215) NOT NULL,
-  `email` varchar(215) NOT NULL,
+  `customer_id ` INT NOT NULL,
+  `customer_name` VARCHAR(215) NOT NULL,
+  `email` VARCHAR(215) NOT NULL,
   `address` TEXT,
   PRIMARY KEY (`customer_id `)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -33,9 +33,9 @@ CREATE TABLE `Customers` (
 -- Table structure for table `Order_Details`
 
 CREATE TABLE `Order_Details` (
-  `orderdetailid` int NOT NULL,
-  `order_id` int NOT NULL,
-  `book_id` int NOT NULL,
+  `orderdetailid` INT NOT NULL,
+  `order_id` INT NOT NULL,
+  `book_id` INT NOT NULL,
   PRIMARY KEY (`orderdetailid`),
   KEY `order_id` (`order_id`),
   KEY `book_id` (`book_id`),
@@ -46,9 +46,9 @@ CREATE TABLE `Order_Details` (
 -- Table structure for table `Orders`
 
 CREATE TABLE `Orders` (
-  `order_id` int NOT NULL,
-  `customer_id` int NOT NULL,
-  `order_date` date DEFAULT NULL,
+  `order_id` INT NOT NULL,
+  `customer_id` INT NOT NULL,
+  `order_date` DATE DEFAULT NULL,
   PRIMARY KEY (`order_id`),
   KEY `customer_id` (`customer_id`),
   CONSTRAINT `Orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `Customers` (`customer_id`)
