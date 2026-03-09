@@ -23,11 +23,11 @@ CREATE TABLE `Books` (
 -- Table structure for table `Customers`
 
 CREATE TABLE `Customers` (
-  `customer_id` int NOT NULL,
-  `customer_name` varchar(215) DEFAULT NULL,
-  `email` varchar(215) DEFAULT NULL,
-  `address` text,
-  PRIMARY KEY (`customer_id`)
+  `customer_id ` int NOT NULL,
+  `customer_name` varchar(215) NOT NULL,
+  `email` varchar(215) NOT NULL,
+  `address` TEXT,
+  PRIMARY KEY (`customer_id `)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Table structure for table `Order_Details`
