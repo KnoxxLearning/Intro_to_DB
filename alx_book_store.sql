@@ -20,8 +20,6 @@ CREATE TABLE `Books` (
   CONSTRAINT `Books_ibfk_1` FOREIGN KEY (`author_id`) REFERENCES `Authors` (`author_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Table structure for table `Customers`
-
 CREATE TABLE `Customers` (
   `customer_id ` INT NOT NULL,
   'customer_name' VARCHAR(215),
@@ -29,8 +27,6 @@ CREATE TABLE `Customers` (
   'address' TEXT,
   PRIMARY KEY (`customer_id `)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- Table structure for table `Order_Details`
 
 CREATE TABLE `Order_Details` (
   `orderdetailid` INT NOT NULL,
@@ -42,8 +38,6 @@ CREATE TABLE `Order_Details` (
   CONSTRAINT `Order_Details_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `Orders` (`order_id`),
   CONSTRAINT `Order_Details_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `Books` (`book_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- Table structure for table `Orders`
 
 CREATE TABLE `Orders` (
   `order_id` INT NOT NULL,
