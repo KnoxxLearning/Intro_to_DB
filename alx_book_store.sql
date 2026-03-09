@@ -22,9 +22,9 @@ CREATE TABLE `Books` (
 
 CREATE TABLE `Customers` (
   `customer_id ` INT NOT NULL,
-  `customer_name` VARCHAR(215) DEFAULT NULL,
-  `email` VARCHAR(215) DEFAULT NULL,
-  `address` TEXT,
+  `customer_name ` VARCHAR(215) DEFAULT NULL,
+  `email ` VARCHAR(215) DEFAULT NULL,
+  `address ` TEXT,
   PRIMARY KEY (`customer_id `)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
