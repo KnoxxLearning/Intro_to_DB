@@ -5,16 +5,16 @@ USE alx_book_store;
 
 CREATE TABLE 'Authors' (
   'author_id ' INT NOT NULL,
-  'author_name' varchar(215) DEFAULT NULL,
+  'author_name' VARCHAR(215) DEFAULT NULL,
   PRIMARY KEY ('author_id ')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `Books` (
-  `book_id` int NOT NULL,
-  `title` varchar(130) DEFAULT NULL,
-  `author_id` int NOT NULL,
-  `price` double DEFAULT NULL,
-  `publication_date` date DEFAULT NULL,
+  `book_id` INT NOT NULL,
+  `title` VARCHAR(130) DEFAULT NULL,
+  `author_id` INT NOT NULL,
+  `price` DOUBLE DEFAULT NULL,
+  `publication_date` DATE DEFAULT NULL,
   PRIMARY KEY (`book_id`),
   KEY `author_id` (`author_id`),
   CONSTRAINT `Books_ibfk_1` FOREIGN KEY (`author_id`) REFERENCES `Authors` (`author_id`)
@@ -22,11 +22,11 @@ CREATE TABLE `Books` (
 
 CREATE TABLE `Customers` (
   `customer_id ` INT NOT NULL,
-  `customer_name` VARCHAR(215),
-  `email` VARCHAR(215),
-  `address` TEXT,
+  customer_name VARCHAR(215),
+  email VARCHAR(215),
+  'address' TEXT,
   PRIMARY KEY (`customer_id `)
-)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `Order_Details` (
   `orderdetailid` INT NOT NULL,
