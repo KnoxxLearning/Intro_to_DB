@@ -31,12 +31,13 @@ CREATE TABLE `Customers` (
 CREATE TABLE `Order_Details` (
   `orderdetailid ` INT NOT NULL,
   `order_id` INT NOT NULL,
-  `book_id` INT NOT NULL,
+  book_id INT NOT NULL,
+  quantity DOUBLE DEFAULT NULL,
   PRIMARY KEY (`orderdetailid`),
   KEY `order_id` (`order_id`),
-  KEY `book_id` (`book_id`),
-  CONSTRAINT `Order_Details_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `Orders` (`order_id`),
-  CONSTRAINT `Order_Details_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `Books` (`book_id`)
+  KEY book_id (book_id),
+  CONSTRAINT `Order_Details_ibfk_1` FOREIGN KEY (order_id) REFERENCES Orders(`order_id`),
+  CONSTRAINT `Order_Details_ibfk_2` FOREIGN KEY (book_id) REFERENCES Books(book_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `Orders` (
