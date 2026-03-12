@@ -41,9 +41,9 @@ CREATE TABLE `Order_Details` (
 
 CREATE TABLE `Orders` (
   order_id INT NOT NULL,
-  customer_id INT NOT NULL,
+  'customer_id ' INT NOT NULL,
   order_date DATE DEFAULT NULL,
   PRIMARY KEY (order_id),
-  KEY customer_id (customer_id),
-  FOREIGN KEY (customer_id) REFERENCES Customers (customer_id)
+  KEY 'customer_id ' ('customer_id '),
+  FOREIGN KEY ('customer_id ') REFERENCES 'Customers' ('customer_id ')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
